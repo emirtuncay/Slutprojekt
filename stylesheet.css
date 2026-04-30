@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+nav {
+    background-color: #34495e;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.kort-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.kort {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 6px;
+    width: 250px;
+}
+
+.kort h3 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.kort p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.kort a {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+/* när man hovrar över knappen så ändras bakgrundsfärgen */
+.kort a:hover {
+    background-color: #1abc9c;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
