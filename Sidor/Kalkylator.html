@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkylator</title>
+    <script src="../Css och Javascript/Kalkylator.js"></script>
+    <link rel="stylesheet" href="../Css och Javascript/stylesheet.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kalkylator</h1>
+      <p>Enkel Kalkylator (Utan funktioner)</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../Sidor/index.html">Hem</a></li>
+        <li><a href="../Sidor/Kalkylator.html">Kalkylator</a></li>
+        <li><a href="../Sidor/Derivata.html">Derivata</a></li>
+        <li><a href="../Sidor/Integral.html">Integral</a></li>
+        <li><a href="../Sidor/Nollställen.html">Nollställen</a></li>
+        <li><a href="../Sidor/Geogebra.html">Geogebra</a></li>
+      </ul>
+    </nav>
+
+    <div class="kalkylator">
+      <input type="text" id="display" readonly />
+
+      <div class="knappar">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button
+          onclick="display.value = display.value.toString().slice(0, -1)"
+          id="operators"
+          class="button"
+        >
+          DE
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
