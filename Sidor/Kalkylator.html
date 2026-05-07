@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkylator</title>
-    <script src="../Css och Javascript/Kalkylator.js"></script>
+    <script src="../Css och Javascript/Kalkylator.js" defer></script>
     <link rel="stylesheet" href="../Css och Javascript/stylesheet.css" />
   </head>
   <body>
@@ -26,6 +26,7 @@
 
     <div class="kalkylator">
       <input type="text" id="display" readonly />
+      <!-- skärm för kalklatorn -->
 
       <div class="knappar">
         <button onclick="clearDisplay()">C</button>
@@ -45,6 +46,8 @@
         <button onclick="appendToDisplay('.')">.</button>
         <button onclick="calculateResult()">=</button>
         <button onclick="appendToDisplay('/')">/</button>
+        <!-- append to display knappar som lägger till siffror i displayen -->
+        <!-- calculate result beräknar resultatet när = trycks -->
         <button
           onclick="display.value = display.value.toString().slice(0, -1)"
           id="operators"
@@ -52,7 +55,12 @@
         >
           DEL
         </button>
+        <!-- display.value får värdet av displayen -->
+        <!-- del  knappen tar bort sista tecknet i displayen -->
       </div>
     </div>
+    <footer>
+      <p>Skapad av Emir ⚛️🤓♾️</p>
+    </footer>
   </body>
 </html>

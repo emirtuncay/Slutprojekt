@@ -1,11 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geogebra</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../Css och Javascript/stylesheet.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Geogebra</h1>
+      <p>Rita grafer och testa matte direkt på sidan</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../Sidor/index.html">Hem</a></li>
+        <li><a href="../Sidor/Kalkylator.html">Kalkylator</a></li>
+        <li><a href="../Sidor/Derivata.html">Derivata</a></li>
+        <li><a href="../Sidor/Integral.html">Integral</a></li>
+        <li><a href="../Sidor/Nollställen.html">Nollställen</a></li>
+        <li><a href="../Sidor/Geogebra.html">Geogebra</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <p>
+        Geogebra är ett matteprogram som vi använder i skolan. Här under har jag
+        bäddat in det så man kan rita funktioner och kolla på grafer utan att
+        lämna sidan.
+      </p>
+      <br />
+
+      <!-- bäddar in geogebra med en iframe -->
+      <div class="geogebra">
+        <iframe src="https://www.geogebra.org/graphing"></iframe>
+      </div>
+      <br />
+      <p>
+        Skriv in en funktion längst upp till vänster, t.ex.
+        <code>x^2</code> eller <code>sin(x)</code>, så ritas den ut.
+      </p>
+    </main>
+  </body>
 </html>

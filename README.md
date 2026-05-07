@@ -1,4 +1,7 @@
 # Slutprojekt
+
 Matte 3c min favorit ämne med extra kärlek och respekt.
 
-Funktioner som får fram derivata, andraderivata, integraler, kalkylator och nollställen via pqformeln
+Funktioner som får fram derivata, andraderivata, integraler, kalkylator och nollställen via pqformeln.
+
+Hemsidan fungerar på olika sorts av webbläsare. Tex: Microsoft Edge, Firefox och Brave. Du kan hitta bilderna på hur det ser ut i de olika webbläsarna i mappen "Bilder".

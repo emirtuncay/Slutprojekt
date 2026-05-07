@@ -12,10 +12,15 @@ body {
 }
 
 header {
-  background-color: #2c3e50;
+  /* gif fyller headern */
+  background-image: url("../Bilder/matteformel.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  padding: 30px 20px;
+  padding: 60px 20px;
   text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
@@ -24,7 +29,7 @@ header h1 {
 }
 
 nav {
-  background-color: #34495e;
+  background-color: #000000;
 }
 
 nav ul {
@@ -39,10 +44,11 @@ nav ul li a {
   color: white;
   text-decoration: none;
   padding: 12px 18px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #1abc9c;
+  background-color: #3a3a3a;
 }
 
 main {
@@ -76,6 +82,15 @@ section h2 {
   padding: 15px;
   border-radius: 6px;
   width: 250px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* lyfter upp kortet lite när man hovrar */
+.kort:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .kort h3 {
@@ -96,6 +111,7 @@ section h2 {
   text-decoration: none;
   border-radius: 4px;
   font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 /* när man hovrar över knappen så ändras bakgrundsfärgen */
 .kort a:hover {
@@ -103,11 +119,12 @@ section h2 {
 }
 
 footer {
-  background-color: #2c3e50;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 15px;
   margin-top: 20px;
+  fixed-bottom: 0;
 }
 
 /* ---------- Kalkylator ------------- */
@@ -132,6 +149,8 @@ button {
   border: none;
   cursor: pointer;
   background-color: #f0f0f0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
@@ -139,3 +158,14 @@ button:hover {
 }
 
 /* -----------------------------------*/
+
+/* ---------- Geogebra ------------- */
+
+.geogebra iframe {
+  width: 100%;
+  max-width: 1000px;
+  height: 650px;
+  border: none;
+}
+
+/* --------------------------------- */
