@@ -23,7 +23,25 @@
         <li><a href="../Sidor/Geogebra.html">Geogebra</a></li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      <section class="pq">
+        <h2>PQ-formeln</h2>
+        <p>
+          Skriv in värdena för <strong>p</strong> och <strong>q</strong> i
+          ekvationen <code> x<sup>2</sup> + px + q = 0. </code>
+        </p>
+
+        <div class="pq-input">
+          <label>p = <input type="number" id="p" step="any" /></label>
+          <label>q = <input type="number" id="q" step="any" /></label>
+          <button onclick="raknaNollstallen()">Räkna ut</button>
+        </div>
+
+        <!-- här skrivs svaret ut -->
+        <p id="svar"></p>
+        <img src="../Bilder/pqformel.png" alt="bildpåpqformeln" />
+      </section>
+    </main>
     <footer>
       <p>Skapad av Emir ⚛️🤓♾️</p>
     </footer>
