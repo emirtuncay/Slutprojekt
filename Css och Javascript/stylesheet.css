@@ -175,6 +175,67 @@ button:hover {
 
 /* -----------------------------------*/
 
+/* ---------- Derivata ---------- */
+/* Newton porträtt ovanför formuläret */
+.newton {
+  text-align: center;
+  margin: 20px auto 10px;
+}
+
+.newton img {
+  width: 150px;
+  height: 190px;
+  /* object-fit: cover gör att bilden fyller ovalen utan att tänjas */
+  object-fit: cover;
+  /* 50% gör en oval av en rektangel (cirkel om bilden var kvadratisk) */
+  border-radius: 50%;
+  border: 3px solid #2c3e50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.newton p {
+  margin-top: 8px;
+  font-style: italic;
+  color: #666;
+  font-size: 14px;
+}
+
+.derivata {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.derivata .inputs {
+  margin: 20px 0;
+}
+
+.derivata label {
+  margin: 0 8px;
+  font-size: 16px;
+}
+
+.derivata input {
+  width: 60px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* fetare så svaret syns tydligt */
+#resultat {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
 /* ---------- Nollställen  pqformeln ---------- */
 .pqinput {
   display: flex;

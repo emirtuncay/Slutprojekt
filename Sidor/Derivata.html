@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Derivata</title>
     <link rel="stylesheet" href="../Css och Javascript/stylesheet.css" />
+    <script src="../Css och Javascript/Derivata.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Derivata</h1>
       <p>Räkna ut derivatan av enkla funktioner</p>
     </header>
-
     <nav>
       <ul>
         <li><a href="../Sidor/index.html">Hem</a></li>
@@ -22,7 +22,29 @@
         <li><a href="../Sidor/Geogebra.html">Geogebra</a></li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      <div class="newton">
+        <img src="../Bilder/newton.jpg" alt="Isaac Newton" />
+        <p>Isaac Newton, en av matematikerna bakom derivata</p>
+      </div>
+
+      <div class="derivata">
+        <p>
+          Skriv in värdena för funktionen
+          <strong>f(x) = ax² + bx + c</strong>
+        </p>
+
+        <div class="inputs">
+          <label>a = <input type="number" id="a" value="0" /></label>
+          <label>b = <input type="number" id="b" value="0" /></label>
+          <label>c = <input type="number" id="c" value="0" /></label>
+        </div>
+
+        <button onclick="räknaDerivata()">Räkna ut derivatan</button>
+
+        <p id="resultat"></p>
+      </div>
+    </main>
     <footer>
       <p>Skapad av Emir ⚛️🤓♾️</p>
     </footer>
