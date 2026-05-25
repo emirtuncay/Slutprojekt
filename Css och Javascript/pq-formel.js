@@ -7,7 +7,9 @@ function raknaNollstallen() {
   let q = parseFloat(document.getElementById("q").value);
   let svar = document.getElementById("svar");
 
-  // kollar om användaren glömt skriva nått
+  // kollar om användaren glömt skriva nått.
+  // isNaN fungerar också som XSS-skydd: om någon skulle skriva in t.ex.
+  // "<script>" så blir parseFloat NaN och vi avbryter direkt.
   if (isNaN(p) || isNaN(q)) {
     svar.textContent = "Skriv in både p och q.";
     return;
@@ -30,4 +32,6 @@ function raknaNollstallen() {
     let x2 = -p / 2 - rot;
     svar.textContent = "x₁ = " + x1 + "   x₂ = " + x2;
   }
+  // OBS: vi använder textContent (inte innerHTML) i hela funktionen.
+  // Det gör att HTML-taggar visas som vanlig text och inte körs som kod = XSS-säkert.
 }

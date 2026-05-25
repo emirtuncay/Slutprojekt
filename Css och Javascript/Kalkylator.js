@@ -12,10 +12,21 @@ function clearDisplay() {
 
 function calculateResult() {
   // beräknar resultatet när = trycks
+
+  // XSS-skydd: eval är farligt eftersom det kör vad som helst som JS-kod.
+  // Därför kollar vi först att displayen BARA innehåller siffror, punkt och
+  // de matte-tecken vi tillåter. Allt annat (bokstäver, <script> osv) stoppas.
+  let tillaten = /^[0-9+\-*/.\s]+$/;
+
+  if (!tillaten.test(display.value)) {
+    display.value = "Fel";
+    return;
+  }
+
   try {
-    display.value = eval(display.value); // eval gör själva matten, behandlar inputten som en matte uttryck sen löser.
+    display.value = eval(display.value); // nu är inputen säker att räkna ut
   } catch (e) {
-    display.value = "Fel"; // om det är fel i matten så visas "Fel" i displayen. Tex "5++5" eller "5/0"
+    display.value = "Fel"; // tex "5++5" eller "5/0"
   }
 }
 

@@ -9,6 +9,13 @@ function räknaIntegral() {
   let b = Number(bInput.value);
   let c = Number(cInput.value);
 
+  // XSS-skydd: Number() gör om inputen till en siffra. Om någon försöker
+  // skriva in HTML eller script så blir det NaN och vi avbryter.
+  if (isNaN(a) || isNaN(b) || isNaN(c)) {
+    resultat.innerText = "Skriv in giltiga siffror.";
+    return;
+  }
+
   // regel: integralen av ax² + bx + c blir (a/3)x³ + (b/2)x² + cx + C
   let nyA = a / 3;
   let nyB = b / 2;
@@ -45,5 +52,7 @@ function räknaIntegral() {
   if (tomt) svar += "C";
   else svar += " + C";
 
+  // innerText (inte innerHTML) gör att HTML-taggar visas som vanlig text
+  // istället för att köras som kod. Det skyddar mot XSS-attacker.
   resultat.innerText = svar;
 }
