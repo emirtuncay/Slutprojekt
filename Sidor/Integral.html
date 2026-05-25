@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integral</title>
     <link rel="stylesheet" href="../Css och Javascript/stylesheet.css" />
+    <script src="../Css och Javascript/Integral.js" defer></script>
   </head>
   <body>
     <header>
@@ -22,7 +23,30 @@
         <li><a href="../Sidor/Geogebra.html">Geogebra</a></li>
       </ul>
     </nav>
-    <main></main>
+
+    <main>
+      <div class="derivata">
+        <p>
+          Skriv in värdena för funktionen
+          <strong>f(x) = ax² + bx + c</strong>
+        </p>
+        <p>
+          Integralen blir då
+          <strong>F(x) = (a/3)x³ + (b/2)x² + cx + C</strong>
+        </p>
+
+        <div class="inputs">
+          <label>a = <input type="number" id="a" value="0" /></label>
+          <label>b = <input type="number" id="b" value="0" /></label>
+          <label>c = <input type="number" id="c" value="0" /></label>
+        </div>
+
+        <button onclick="räknaIntegral()">Räkna ut integralen</button>
+
+        <p id="resultat"></p>
+      </div>
+    </main>
+
     <footer>
       <p>Skapad av Emir ⚛️🤓♾️</p>
     </footer>
