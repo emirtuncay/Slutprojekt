@@ -61,12 +61,14 @@ nav ul li a:hover {
   background-color: #3a3a3a;
 }
 
+/* innehållet i mitten, max 900px så det inte sprids ut för mycket på stora skärmar */
 main {
   max-width: 900px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
+/* vit ruta runt varje stycke, ger den där "kort"-känslan */
 section {
   background-color: white;
   padding: 20px;
@@ -80,6 +82,7 @@ section h2 {
   color: #2c3e50;
 }
 
+/* lägger korten bredvid varandra, hoppar ner på ny rad om de inte får plats */
 .kort-lista {
   display: flex;
   flex-wrap: wrap;
@@ -237,6 +240,7 @@ button:hover {
 }
 
 /* ---------- Nollställen  pqformeln ---------- */
+/* rad med p och q rutorna + knappen bredvid */
 .pqinput {
   display: flex;
   flex-wrap: wrap;
@@ -288,4 +292,23 @@ button:hover {
 
 /* --------------------------------- */
 
-/* göra iframen responsiv på mobil senare + anpassa hemsidan för mobiler */
+/* ---------- Mobil anpassning ---------- */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .kort {
+    width: 100%;
+  }
+
+  .geogebra iframe {
+    height: 400px;
+  }
+}
+/* ------------------------------------- */
